@@ -1,0 +1,12 @@
+general:
+    logfile: 'stdin'
+    # ....
+database:
+    backend: 'sqlite' # avalible sqlite, mysql, pgsql
+    backend_params:
+        dbfile: '...'
+    # host:
+    # name:
+    # user:
+    # port:
+    # pass:
