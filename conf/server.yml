@@ -1,5 +1,5 @@
 general:
-    logfile: 'stdin'
+    logfile:
     # ....
 database:
     backend: 'sqlite' # avalible sqlite, mysql, pgsql

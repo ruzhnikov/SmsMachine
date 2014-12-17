@@ -66,9 +66,8 @@ sub get_param {
     }
     elsif ( scalar @param_array > 1 ) {
         my $key = shift @param_array;
-        my $tmp_data;
         if ( $self->_conf->{ $key } ) {
-            $tmp_data = $self->_conf->{ $key };
+            my $tmp_data = $self->_conf->{ $key };
             for ( @param_array ) {
                 $tmp_data = ( $_ =~ /^\d+$/ ) ? delete $tmp_data->[$_] : delete $tmp_data->{$_};
                 last unless $tmp_data;
