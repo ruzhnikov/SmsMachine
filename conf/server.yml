@@ -1,12 +1,17 @@
 general:
-    logfile:
-    # ....
+    path: '/opt/smsmachine'
+
+logger:
+    dir: 'log'
+    file: 'smsmachine.log'
+
 database:
-    backend: 'sqlite' # avalible sqlite, mysql, pgsql
-    backend_params:
-        dbfile: '...'
-    # host:
-    # name:
-    # user:
-    # port:
-    # pass:
+    dbtype: sqlite # now avail only sqlite
+    db_params:
+        dbdir: 'data/db'
+        dbfile: smsmachine.db
+
+redis:
+    host: localhost
+    port:
+    database: 3

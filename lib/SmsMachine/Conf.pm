@@ -79,6 +79,12 @@ sub get_param {
     return $res_data;
 }
 
+sub get_general {
+    my $self = shift;
+
+    return $self->get_param( 'general' ) || {};
+}
+
 sub _conf {
     my $self = shift;
 

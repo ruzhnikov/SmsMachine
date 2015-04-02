@@ -8,7 +8,7 @@ sub init {
 
     my $conf;
     my $date_format   = '[%d{yyyy-MM-dd HH:mm:ss}]';
-    my $conv_patternt = $date_format . ' [%p] %F:%L %m%n';
+    my $conv_patternt = $date_format . ' [%p] %F{2}:%L %m%n';
     if ( $filename ) {
         $conf = qq(
             log4perl.category.SmsMachine  = DEBUG, Logfile
