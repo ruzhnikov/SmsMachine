@@ -16,7 +16,9 @@ Alexander Ruzhnikov <<ruzhnikov85@gmail.com>>
 
 =cut
 
-use Modern::Perl;
+use strict;
+use warnings;
+use 5.010;
 use YAML::Syck ();
 
 my $CONFIG_PATH = '/etc/smsmachine';

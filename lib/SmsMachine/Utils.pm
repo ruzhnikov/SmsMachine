@@ -1,7 +1,11 @@
 package SmsMachine::Utils;
 
+use strict;
+use warnings;
+use 5.010;
 use POSIX qw/ strftime /;
 use Date::Parse qw/ str2time /;
+use File::Spec;
 
 sub get_now {
     return strftime "%Y-%m-%d %H:%M:%S", localtime(time);
@@ -27,6 +31,17 @@ sub check_run_time {
 
     return 1 if $unix_time > str2time( $date_start ) && $unix_time < str2time( $date_end );
     return;
+}
+
+sub get_conf_dir {
+    my $conf_dir = '/etc/smsmachine';
+
+    return $conf_dir if -e $conf_dir && -d $conf_dir;
+
+    my $current_path = (File::Spec->splitpath( __FILE__ ))[1];
+    $conf_dir = $current_path . '../../conf';
+
+    return $conf_dir;
 }
 
 1;

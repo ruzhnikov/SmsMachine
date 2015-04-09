@@ -1,6 +1,8 @@
 package SmsMachine::Logger;
 
-use Modern::Perl;
+use strict;
+use warnings;
+use 5.010;
 use Log::Log4perl;
 
 sub init {
